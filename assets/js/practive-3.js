@@ -70,87 +70,87 @@
 // BTVN: Object
 // 1. Tạo object person gồm các thông tin sau: id,name,address,age,email. Tạo các getter, setter tương ứng với mỗi thuộc tính, Tạo 1 method để in ra toàn bộ thông tin của object
 
-var person = {
-    id: 1,
-    name: 'NguyenTruongGiang',
-    address: 'HungYen',
-    age: 25,
-    email: 'truonggiang190398@gmail.com',
-};
+// var person = {
+//     id: 1,
+//     name: 'NguyenTruongGiang',
+//     address: 'HungYen',
+//     age: 25,
+//     email: 'truonggiang190398@gmail.com',
+// };
 
 // Setters and getters:
 //id :
-person.id = 2;
-console.log(person.id);
+// person.id = 2;
+// console.log(person.id);
 //name:
-person.name = 'Nguyen Truong Giang';
-console.log(person.name);
+// person.name = 'Nguyen Truong Giang';
+// console.log(person.name);
 //address:
-person.address = 'Hung Yen';
-console.log(person.address);
+// person.address = 'Hung Yen';
+// console.log(person.address);
 //age:
-person.age = 24;
-console.log(person.age);
+// person.age = 24;
+// console.log(person.age);
 //email:
-person['email'] = 'nguyentruonggiang190398@gmail.com';
-console.log(person['email']);
+// person['email'] = 'nguyentruonggiang190398@gmail.com';
+// console.log(person['email']);
 
 //Method print:
-person.print = function () {
-    console.log('id: ', this.id);
-    console.log('name: ', this.name);
-    console.log('address: ', this.address);
-    console.log('age: ', this.age);
-    console.log('email: ', this.email);
-};
+// person.print = function () {
+//     console.log('id: ', this.id);
+//     console.log('name: ', this.name);
+//     console.log('address: ', this.address);
+//     console.log('age: ', this.age);
+//     console.log('email: ', this.email);
+// };
 
-person.print();
+// person.print();
 
 // 2. Thêm key-value về github của bạn (github là một đối tượng gồm các thuộc tính: id, username, url) và mức lương mong muốn (number), cập nhật tên của bạn thành dạng rút gọn, ví dụ: "Dang Tran Quyen" => "Tran Quyen" || "Quyen Dang", xóa mức lương đó đi
 
-person.github = {
-    id: 1,
-    username: 'Tr-Giang',
-    url: 'https://github.com/Tr-Giang'
-};
-person.salary = 1000;
-person.name = 'Truong Giang';
-delete person.salary;
-console.log(person);
+// person.github = {
+//     id: 1,
+//     username: 'Tr-Giang',
+//     url: 'https://github.com/Tr-Giang'
+// };
+// person.salary = 1000;
+// person.name = 'Truong Giang';
+// delete person.salary;
+// console.log(person);
 
 // 3. Đóng băng 2 thuộc tính email và github (sử dụng defineProperties)
 
-Object.defineProperties(person, {
-    email: {
-        writable: false,
-    },
-    github: {
-        writable: false,
-    }
-});
-console.log(person);
+// Object.defineProperties(person, {
+//     email: {
+//         writable: false,
+//     },
+//     github: {
+//         writable: false,
+//     }
+// });
+// console.log(person);
 
 // 4. Duyệt qua key-value của object bằng 2 cách (for/in || Object.entries)
 
-for (const key in person) {
-    console.log(`${key}:`, person[key]);
-}
-console.log(Object.entries(person));
+// for (const key in person) {
+//     console.log(`${key}:`, person[key]);
+// }
+// console.log(Object.entries(person));
 
 // 5. Thêm một phương thức để lấy ra thông tin github (return), Cho object salary, hãy gộp nó vào object ban đầu
 //lay thong tin github:
-person.getGithub = function () {
-    return this.github;
-};
-var github = person.getGithub();
-console.log(github);
+// person.getGithub = function () {
+//     return this.github;
+// };
+// var github = person.getGithub();
+// console.log(github);
 
-//Obj salary:
-var salary = {
-    salary: 1000,
-};
+// //Obj salary:
+// var salary = {
+//     salary: 1000,
+// };
 
-Object.assign(person, salary);
+// Object.assign(person, salary);
 
-console.log(person);
+// console.log(person);
 
